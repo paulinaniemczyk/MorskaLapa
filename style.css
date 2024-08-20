@@ -1,0 +1,2245 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    max-width: 1620px;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+    font-family: "Raleway",sans-serif;
+    position: relative;
+    width: 100%;
+}
+
+
+
+/*    NAVIGATION    */
+
+nav#mobile {
+    display: none;
+}
+
+div.wrapper.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 20px;
+    /* justify-content: space-between; */
+    z-index: 2;
+}
+
+div.navigation.sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgb(32,98,213);
+    animation: stickyNavOpacity 0.5s;
+}
+div.navigation.sticky button{
+    
+    background-color: rgb(32,98,213);
+    border: 1px solid white;
+    
+}
+div.navigation.sticky button:hover{
+    
+    color: rgb(32,98,213);
+    
+    
+}
+
+@keyframes stickyNavOpacity {
+    0% {
+        opacity: 0%;
+    }
+    
+    100% {
+        opacity: 100%;
+        
+    }
+} 
+
+div nav {
+    flex-basis: 45%;
+}
+
+div.wrapper.navigation nav ul {
+    list-style: none;
+    display: flex;
+    padding: 50px;
+}
+
+div.wrapper.navigation nav ul li{
+    margin: 0 10px;
+    padding-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+div.wrapper.navigation nav ul li a::before{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    border-bottom: 1px solid white;
+    transition: 0.3s linear;
+}
+
+div.wrapper.navigation nav ul li a:hover::before {
+    border-bottom: 2px solid white;
+    width: 100%;
+    left: 0;
+} 
+
+div.wrapper.navigation nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+div.logo{
+    flex-basis: 20%;
+    position: relative;
+    padding-top: 10px;
+}
+
+div.logo img{
+    width: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateX(50%);  
+}
+
+div.media {
+    flex-basis: 20%;
+    text-align: right;
+    padding-top: 50px;
+    flex-grow: 2;
+}
+
+div.media a{
+    display: inline-block;
+}
+div.media i{
+    font-size: 1.25rem;
+    padding-right: 10px;
+    color: white;
+    transition: 0.1s;
+}
+div.media i:hover {
+    font-size: 1.5rem;
+}
+
+div.media button {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgb(1, 138, 237);
+    border: 1px solid white;
+    font-family: "Raleway",sans-serif;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+div.media button:hover {
+    color: rgb(1, 138, 237);
+    background-color: white;  
+}
+
+/* ------------------------------- */
+@media (max-width: 1450px) {
+
+    div.wrapper.navigation nav ul {
+        padding: 50px 0 0 50px;
+}
+div nav {
+    flex-basis: 55%;
+}
+}
+
+@media (min-width: 1035px) and (max-width: 1190px) {
+    /* html {
+        font-size: 17px;
+    } */
+
+    div.wrapper.navigation nav ul {
+        padding: 50px 0 0 10px;
+    }
+    div.wrapper div.logo {
+        flex-basis: 17%;
+        padding-top: 20px;
+    }
+    
+}
+
+@media (min-width: 980px) and (max-width: 1034px) {
+    /* html {
+        font-size: 17px;
+    } */
+
+    div.wrapper.navigation nav ul {
+        padding: 50px 0 0 10px;
+    }
+    div.wrapper div.logo {
+        flex-basis: 16%;
+        padding-top: 20px;
+    }
+    
+}
+
+@media (min-width: 431px) and (max-width: 979px) {
+    /* html {
+        font-size: 20px;
+    } */
+
+div.wrapper.navigation {
+   
+    padding: 0px;
+    
+}
+div.wrapper.navigation nav ul li a {
+    font-size: 0.8rem;
+}
+    nav#mobile {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav#mobile ul{
+        display: none;
+        position: absolute;
+        top:0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgb(32,98,213);
+        padding: 10px 0 10px 10px;
+    }
+    nav#desktop {
+        display: none;
+    }
+    div.wrapper div.logo {
+        flex-basis: 160px;
+        padding-top: 20px;
+    }
+    div.media{
+        flex-grow: 1;
+        flex-basis: 30%;
+        text-align: left;
+    }
+    nav#mobile {
+        display: flex;
+        
+        /* background-color: blue; */
+    }
+    nav#mobile button {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        text-align: right;
+        font-size: 0;
+        /* align-self:flex-end; */
+    }
+    nav#mobile button:hover {
+        color: black;
+    }
+    
+    nav#mobile button i:hover {
+        color: white;
+    }
+    nav#mobile button.close {
+        padding-top: 15px;
+    }
+    nav#mobile button i {
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 2rem;
+    }
+    nav#mobile li a {
+        display: block;
+        padding: 20px 10px 0 10px;
+        cursor: pointer;
+        /* margin: 20px 0; */
+    }
+    div nav {
+        flex-basis: 50%;
+    }
+    button#buttonReservation {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 430px) {
+    /* html {
+        font-size: 20px;
+    } */
+
+div.wrapper.navigation {
+   
+    padding: 0px;
+    
+}
+
+div.wrapper div.logo {
+    flex-basis: 200px;
+}
+
+div.wrapper.navigation nav ul li a {
+    font-size: 0.8rem;
+}
+    nav#mobile {
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav#mobile ul{
+        display: none;
+        position: absolute;
+        top:0;
+        right: 0;
+        flex-direction: column;
+        background-color: rgb(32,98,213);
+        padding: 10px 0 10px 10px;
+    }
+    nav#desktop {
+        display: none;
+    }
+    div.wrapper div.logo {
+        flex-basis: 160px;
+        padding-top: 20px;
+    }
+    div.media{
+        flex-grow: 1;
+        flex-basis: 30%;
+        text-align: left;
+    }
+    nav#mobile {
+        display: flex;
+        
+        /* background-color: blue; */
+    }
+    nav#mobile button {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        text-align: right;
+        font-size: 0;
+        color: white;
+        /* align-self:flex-end; */
+    }
+    nav#mobile button:hover {
+        color: black;
+    }
+    
+    nav#mobile button i:hover {
+        color: white;
+    }
+    nav#mobile button.close {
+        padding-top: 15px;
+    }
+    nav#mobile button i {
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 2rem;
+    }
+    nav#mobile li a {
+        display: block;
+        padding: 20px 10px 0 10px;
+        cursor: pointer;
+        /* margin: 20px 0; */
+    }
+    div nav {
+        flex-basis: 50%;
+    }
+    button#buttonReservation {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+}
+
+/*  HEADER */
+
+header {
+height: 100vh;
+}
+
+
+/* SLIDER  */
+header div.slider {
+    height: 100vh;
+    
+    overflow: hidden;
+    position: relative;
+    
+}
+header div.slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slider 10s infinite;
+}
+
+header div.slider .slide:nth-child(1) {
+                background-image:  url(../NOWA/img/banner.png);
+                animation-delay: 0s;
+             }
+             
+             header div.slider .slide:nth-child(2) {
+                background-image:  url(../NOWA/img/wjazdMorskaLapa.jpg);
+                animation-delay: -5s;
+             }
+            
+             @keyframes slider {
+                0%, 40%, 100% {
+                  transform: translateX(0);
+                  animation-timing-function: ease;
+                }
+                50% {
+                  transform: translateX(-100%);
+                  animation-timing-function: step-end;
+                }
+                90% {
+                  transform: translateX(100%);
+                  animation-timing-function: ease;
+                }
+            }
+            
+header section.slider {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    left: 0%;
+    text-align: center;  
+}
+
+header section.slider h1{
+   font-size: 5rem;
+   font-weight: 300;
+   padding-bottom: 10px;
+}
+            
+header section.slider p{
+    font-size: 1.5rem;
+}
+
+/* modal reservation */
+div#modalReservation {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(50%,150%);
+    width: 50%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    z-index: 10;
+    font-size: 1.1rem;
+    padding-top: 50px;
+    text-align: center;
+    line-height: 150%;
+}
+div#modalReservation h3{
+    font-weight: 300;
+}
+div#modalReservation a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: rgb(0, 157, 255);
+    font-family: "Raleway",sans-serif;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div#modalReservation a:hover {
+    color: rgb(0, 157, 255);
+    background-color: rgb(250,250,250);  
+    border: 1px solid grey;
+}
+div#modalReservation button {
+    padding: 10px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-150%,50%);
+    font-size: 0.75rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+div#modalReservation button:hover {
+    transform: scale(1.2) translate(-125%,35%);
+}  
+
+@media (min-width: 391px) and (max-width: 768px) {
+    header section.slider h1 {
+        font-size: 3rem;
+    }
+    header section.slider p {
+        font-size: 0.8rem;
+    }
+    div#modalReservation h3{
+        font-size: 0.9rem;
+    }
+    div#modalReservation a{
+        font-size: 0.7rem;
+    }
+    div#modalReservation {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(25%,100%);
+        width: 70%;
+        height: 30%;
+        background-color: black;
+        color: white;
+        z-index: 10;
+        font-size: 1.1rem;
+        padding-top: 50px;
+        text-align: center;
+        line-height: 150%;
+    }
+}
+@media (min-width: 0px) and (max-width: 390px) {
+    header section.slider h1 {
+        font-size: 2.5rem;
+    }
+    header section.slider p {
+        font-size: 0.8rem;
+    }
+    div#modalReservation h3{
+        font-size: 0.8rem;
+    }
+    div#modalReservation a{
+        font-size: 0.6rem;
+    }
+    div#modalReservation {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(25%,100%);
+        width: 70%;
+        height: 30%;
+        background-color: black;
+        color: white;
+        z-index: 10;
+        font-size: 1.1rem;
+        padding-top: 50px;
+        text-align: center;
+        line-height: 150%;
+    }
+   
+}
+
+
+/* SECTION ABOUT  */
+
+section.about {
+    color: black;
+    display: flex;
+    margin: 100px 60px;
+}
+
+section.about .description{
+    flex-basis: 40%;
+    padding: 20px 60px;
+}
+section.about .description h3{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+section.about .description p:first-child{
+    color: rgb(0, 157, 255);
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-bottom: 20px;
+}
+
+section.about .description p{
+    font-size: 0.8rem;
+    font-weight: 200;
+    line-height: 200%;
+    padding-right: 20px;
+}
+
+section.about .foto{
+    flex-basis: 60%;
+    background-image: url(img/domki.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+@media (min-width: 980px) and (max-width: 1034px) {
+    section.about .foto {
+        margin-top: 140px;
+    }
+
+}
+
+@media (min-width: 431px) and (max-width: 979px) {
+    section.about {
+        flex-direction: column;
+        align-items: stretch;
+        height: 1000px;
+        margin: 50px 60px;
+    }
+    section.about .description h3{
+        font-size: 1.8rem;
+    }
+   
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    section.about {
+        flex-direction: column;
+        align-items: stretch;
+        height: 1000px;
+        margin: 50px 0px;
+    }
+    section.about .description h3{
+        font-size: 1.8rem;
+    }
+
+    section.about .description {
+        padding: 0 30px;
+    }
+    section.about .description p {
+        padding: 0;
+    }
+    section.about .foto {
+        margin-top: 20px;
+    }
+   
+}
+
+/*  SEKCJA OFFER */
+
+article.description {
+    color: black;
+    text-align: center;
+    background-color: rgb(250,250,250);
+    padding-bottom: 40px;
+   
+}
+
+article.description p{
+    color: rgb(0, 157, 255);
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    
+}
+
+article.description h3{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+article.description div.container{
+    display: flex;
+    justify-content: center;
+}
+
+article.description div.container div.icons{
+    flex-basis: 28%;
+}
+
+article.description div.container div.icons h5{
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+article.description div.container div.icons figure {
+    display: flex;
+    padding: 0 0 20px 75px;
+}
+/* article.description div.container div.icons:first-child figure{
+    padding: 0 0 20px 50px;
+}
+article.description div.container div.icons:last-child figure {
+    padding: 0 0 20px 50px;
+} */
+article.description div.container div.icons figure img {
+    height: 60px;
+}
+article.description div.container div.icons figure p {
+    color: black;
+    padding: 20px;
+    text-align: left;
+}
+
+article.description  h5{
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+@media (min-width: 980px) and (max-width: 1024px) {
+    article.description div.container{
+        
+        flex-direction: column;
+    }
+    article.description div.container div.icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    article.description div.container div.icons h5{
+        flex-basis: 100%;
+        font-weight: 500;
+    }
+    article.description div.container div.icons figure{
+        flex-basis: 40%;
+    }
+    article.description h5  {
+        font-weight: 500;
+    }
+    
+}
+@media (min-width: 769px) and (max-width: 979px) {
+    article.description div.container{
+        
+        flex-direction: column;
+    }
+    article.description div.container div.icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    article.description div.container div.icons h5{
+        flex-basis: 100%;
+        font-weight: 500;
+    }
+    article.description div.container div.icons figure{
+        flex-basis: 40%;
+    }
+    article.description h5  {
+        font-weight: 500;
+    }
+    
+}
+@media (min-width: 431px) and (max-width: 768px) {
+    article.description div.container{
+        flex-direction: column;
+    }
+    article.description div.container div.icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    article.description div.container div.icons h5{
+        flex-basis: 100%;
+        font-weight: 500;
+    }
+    article.description div.container div.icons figure{
+        flex-basis: 40%;
+    }
+    article.description h5  {
+        font-weight: 500;
+    }
+    article.description h3  {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    article.description div.container{
+        flex-direction: column;
+    }
+    article.description div.container div.icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    article.description div.container div.icons h5{
+        flex-basis: 100%;
+        font-weight: 500;
+        font-size: 0.8rem;
+        padding: 40px 0 40px 0;
+    }
+    article.description div.container div.icons figure{
+        flex-basis: 100%;
+    }
+    article.description h5  {
+        font-weight: 500;
+    }
+    article.description h3  {
+        font-size: 1.3rem;
+        padding-bottom: 0;
+    }
+    article.description div.container div.icons figure{
+        padding: 0 0 20px 50px;
+    }
+    
+}
+/*  localization */
+
+article.localization {
+    margin: 0 100px;
+    padding: 100px 60px 100px 60px;
+    
+}
+article.localization p{
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 200;
+    line-height: 200%;
+    
+}
+
+article.localization h3{
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 40px;
+    
+}
+@media (min-width: 769px) and (max-width: 979px) {
+    article.localization {
+        padding: 100px 0;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    article.localization {
+        padding: 100px 0;
+    }
+
+    article.localization h3{
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    article.localization {
+        padding: 50px 30px;
+        margin: 0;
+    }
+
+    article.localization h3{
+        font-size: 1.5rem;
+    }
+
+}
+
+         /*  dog */
+article.dog {
+    position: relative;
+    overflow: hidden;
+}
+article.dog div.slider{
+    height: 60vh;
+    background-image: url(img/bianka.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    filter: brightness(0.8);  
+}
+
+article.dog div.text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+article.dog div.text h3{
+        font-size: 2rem;
+        font-weight: 400;
+        padding-top: 200px;
+        color: white;
+        text-align: center;
+    }
+
+article.dog p:first-child {
+        color: rgb(0, 157, 255);
+        font-size: 0.8rem;
+        font-weight: 300;
+        padding-bottom: 20px;
+        padding-top: 150px;
+    }
+article.dog div.wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 700px;
+    margin: 0 60px;
+    padding: 20px 0;
+}
+article.dog div.foto {
+    flex-basis: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+}
+
+article.dog div.foto.beach {
+    background-image: url(img/lapkaPlaża.jpg);
+    padding: 0;
+
+}
+article.dog div.beach {
+    padding-left: 20px;
+}
+
+article.dog div {
+    flex-basis: 50%;
+    padding: 0px;
+    
+}
+article.dog p{
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 200;
+    line-height: 200%;
+    padding-right: 40px;
+
+}
+
+article.dog div h3{
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+    padding-right: 40px;
+}
+
+article.dog div.foto.home {
+    background-image: url(img/skrzynkaZabawki.jpg);
+    background-position: bottom;
+    flex-basis: 50%;
+    padding: 0;
+}
+
+@media (min-width: 769px) and (max-width: 979px) {
+    article.dog div.wrapper {
+        flex-wrap: wrap;
+        min-height: 890px;
+    }
+    article.dog div {
+        flex-basis: 100%;
+        height: 500px;
+        order: 1;
+        padding-left: 30px;
+    }
+    article.dog div.foto.beach {
+        order: 2;
+    }
+    article.dog div.foto {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+    article.dog div.foto.home {
+        flex-basis: 100%;
+    }
+    article.dog p:first-child {
+        padding-top: 100px;
+    }
+    article.dog div.beach {
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+    article.dog div.wrapper {
+        flex-wrap: wrap;
+        min-height: 890px;
+    }
+    article.dog div {
+        flex-basis: 100%;
+        height: 500px;
+        order: 1;
+        padding-left: 30px;
+    }
+    article.dog div h3{
+        font-size: 1.5rem;
+    }
+    article.dog div.foto.beach {
+        order: 2;
+    }
+    article.dog div.foto {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+    article.dog div.foto.home {
+        flex-basis: 100%;
+    }
+    article.dog p:first-child {
+        padding-top: 100px;
+    }
+    article.dog div.beach {
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 391px) and (max-width: 430px) {
+    article.dog div.wrapper {
+        flex-wrap: wrap;
+        min-height: 1050px;
+        padding: 0;
+    }
+    article.dog div {
+        flex-basis: 100%;
+        height: 560px;
+        order: 1;
+        padding-left: 30px;
+    }
+    article.dog div h3{
+        font-size: 1.5rem;
+    }
+    article.dog div.foto.beach {
+        order: 2;
+    }
+    article.dog div.foto {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+    article.dog div.foto.home {
+        flex-basis: 100%;
+    }
+    article.dog p:first-child {
+        padding-top: 50px;
+    }
+    article.dog div.beach {
+        padding-left: 30px;
+    }
+    article.dog div.wrapper {
+        margin: 0;
+    }
+}
+
+@media (min-width: 374px) and (max-width: 390px) {
+    article.dog div.wrapper {
+        flex-wrap: wrap;
+        min-height: 1100px;
+        padding: 0;
+    }
+    article.dog div {
+        flex-basis: 100%;
+        height: 560px;
+        order: 1;
+        padding-left: 30px;
+    }
+    article.dog div h3{
+        font-size: 1.5rem;
+    }
+    article.dog div.foto.beach {
+        order: 2;
+    }
+    article.dog div.foto {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+    article.dog div.foto.home {
+        flex-basis: 100%;
+    }
+    article.dog p:first-child {
+        padding-top: 50px;
+    }
+    article.dog div.beach {
+        padding-left: 30px;
+    }
+    article.dog div.wrapper {
+        margin: 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+    article.dog div.wrapper {
+        flex-wrap: wrap;
+        min-height: 1200px;
+        padding: 0;
+    }
+    article.dog div {
+        flex-basis: 100%;
+        height: 560px;
+        order: 1;
+        padding-left: 30px;
+    }
+    article.dog div h3{
+        font-size: 1.5rem;
+    }
+    article.dog div.foto.beach {
+        order: 2;
+    }
+    article.dog div.foto {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+    article.dog div.foto.home {
+        flex-basis: 100%;
+    }
+    article.dog p:first-child {
+        padding-top: 50px;
+    }
+    article.dog div.beach {
+        padding-left: 30px;
+    }
+    article.dog div.wrapper {
+        margin: 0;
+    }
+}
+
+/*  GALERIA  */
+
+section.gallery {
+    margin: 0 60px;
+    padding: 100px 100px 50px 100px;
+}
+
+section.gallery h3{
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    
+}
+
+section.gallery div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 1200px;
+
+}
+
+section.gallery div.gallery div:nth-child(1),
+section.gallery div.gallery div:nth-child(2),
+section.gallery div.gallery div:nth-child(6),
+section.gallery div.gallery div:nth-child(7),
+section.gallery div.gallery div:nth-child(11),
+section.gallery div.gallery div:nth-child(12) {
+    flex-basis: 48%;
+    height: 200px;
+    background-color: grey;
+}
+
+section.gallery div.gallery div:nth-child(3),
+section.gallery div.gallery div:nth-child(4),
+section.gallery div.gallery div:nth-child(5),
+section.gallery div.gallery div:nth-child(8),
+section.gallery div.gallery div:nth-child(9),
+section.gallery div.gallery div:nth-child(10) {
+    flex-basis: 31%;
+    height: 200px;
+    background-color: grey;
+}
+
+section.gallery div.gallery div:nth-child(1){
+    background-image: url(img/gallery/g1.jpg);
+    
+}
+section.gallery div.gallery div:nth-child(2){
+    background-image: url(img/gallery/g2.jpg);
+}
+section.gallery div.gallery div:nth-child(3){
+    background-image: url(img/gallery/g3.jpg);
+}
+section.gallery div.gallery div:nth-child(4){
+    background-image: url(img/gallery/g4.jpg);
+}
+section.gallery div.gallery div:nth-child(5){
+    background-image: url(img/gallery/g5.jpg);
+}
+section.gallery div.gallery div:nth-child(6){
+    background-image: url(img/gallery/g6.jpg);
+}
+section.gallery div.gallery div:nth-child(7){
+    background-image: url(img/gallery/g7.jpg);
+}
+section.gallery div.gallery div:nth-child(8){
+    background-image: url(img/gallery/g8.jpg);
+}
+section.gallery div.gallery div:nth-child(9){
+    background-image: url(img/gallery/g9.jpg);
+}
+section.gallery div.gallery div:nth-child(10){
+    background-image: url(img/gallery/g10.jpg);
+}
+section.gallery div.gallery div:nth-child(11){
+    background-image: url(img/gallery/g11.jpg);
+}
+section.gallery div.gallery div:nth-child(12){
+    background-image: url(img/gallery/g12.jpg);
+}
+
+
+section.gallery div.gallery div{
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    section.gallery {
+        padding: 0;
+    }
+    section.gallery h3 {
+        padding-top: 60px;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+    section.gallery {
+        padding: 0;
+    }
+    section.gallery h3 {
+        padding-top: 60px;
+    }
+    section.gallery h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    section.gallery {
+        padding: 0;
+        margin: 0 20px;
+    }
+    section.gallery h3 {
+        padding-top: 60px;
+    }
+    section.gallery h3 {
+        font-size: 1.2rem;
+    }
+    section.gallery div.gallery div:nth-child(1),
+section.gallery div.gallery div:nth-child(2),
+section.gallery div.gallery div:nth-child(6),
+section.gallery div.gallery div:nth-child(7),
+section.gallery div.gallery div:nth-child(11),
+section.gallery div.gallery div:nth-child(12) {
+    flex-basis: 100%;
+    height: 300px;
+    padding-bottom: 20px;
+    
+}
+
+section.gallery div.gallery div:nth-child(3),
+section.gallery div.gallery div:nth-child(4),
+section.gallery div.gallery div:nth-child(5),
+section.gallery div.gallery div:nth-child(8),
+section.gallery div.gallery div:nth-child(9),
+section.gallery div.gallery div:nth-child(10) {
+    flex-basis: 100%;
+    height: 300px;
+    
+}
+
+section.gallery div.gallery{
+    height: 4000px;
+}
+}
+/*Image modal*/
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
+} 
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    /* object-fit: cover; */
+}
+
+.closeBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.3);
+}
+
+.nextBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.nextBtn:hover, 
+.prevBtn:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.3);
+}
+
+.prevBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+
+
+/*   PRICE  */
+
+section.price {
+    margin: 0 60px;
+    padding:50px 60px 80px 60px;
+    color: black;
+    text-align: center;
+}
+
+section.price h3{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 10px;  
+}
+
+section.price h5{
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+section.price p{
+    padding: 0 50px;
+    width: 30%;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+section.price p:nth-child(1){
+    text-align: left;
+}
+section.price p:nth-child(2){
+    text-align: right;
+
+}
+
+section.price div.price div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(189, 189, 189);
+}
+@media (min-width: 980px) and (max-width: 1024px) {
+    section.price {
+        margin: 0;
+        padding: 50px 0;
+    }
+    section.price div.price div {
+        margin: 0 100px;
+    }
+}
+@media (min-width: 769px) and (max-width: 979px) {
+    section.price {
+        margin: 0;
+        padding: 50px 0;
+    }
+    section.price div.price div {
+        margin: 0 20px;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+    section.price h3{
+        font-size: 1.5rem;
+    }
+    section.price h5{
+        font-size: 0.8rem;
+    }
+    section.price p{
+        font-size: 1rem;
+    }
+    section.price div.price div {
+        margin: 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    section.price h3{
+        font-size: 1.5rem;
+    }
+    section.price h5{
+        font-size: 0.8rem;
+    }
+    section.price p{
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    section.price div.price div {
+        margin: 0;
+    }
+    section.price {
+        margin: 0;
+        padding: 40px 30px;
+    }
+}
+
+/* information */
+section.price.regulation {
+    margin: 0;
+    padding: 0 140px;
+    background-color: rgb(250,250,250);
+}
+
+section.price div.information {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0px 0px;
+    color: black;
+    padding-bottom: 50px;
+}
+section.price div.information h5{
+    padding-bottom: 20px;
+    font-size: 1.15rem;
+    padding-top: 30px;
+}
+section.price div.information div:first-child{
+    flex-basis: 50%;
+}
+section.price div.information div:nth-child(2){
+    flex-basis: 40%;
+}
+
+section.price div.information p, ul{
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: left;
+    padding: 0 20px;
+}
+
+section.price div.information figure {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+section.price div.information p {
+    width: 80%;
+    margin: 0;
+}
+section.price div.information ul {
+    width: 80%;
+}
+section.price div.information div:nth-child(2) p {
+    width: 60%;
+    line-height: 400%;
+}
+section.price div.information div figure:nth-of-type(1) p {
+    line-height: 150%;
+}
+section.price div.information div figure p,
+section.price div.information div figure ul{
+    line-height: 130%;
+}
+section.price div.information div figure ul p{
+    padding: 0;
+}
+section.price div.information div figure ul li{
+    margin: 0 0 0 20px;
+}
+section.price div.information figure img{
+    max-height: 64px;
+}
+section.price div.information button {
+    border: none;
+}
+section.price div.information button a{
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgb(0, 157, 255);
+    font-family: "Raleway",sans-serif;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+
+section.price div.information button a:hover {
+    color: rgb(0, 157, 255);
+    background-color: rgb(250,250,250);  
+    border: 1px solid grey;
+}
+
+
+@media (min-width: 980px) and (max-width: 1024px) {
+    section.price.regulation {
+        padding: 0;
+    }
+    section.price div.information {
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+    section.price div.information div:first-child {
+        flex-basis: 100%;
+    }
+    section.price div.information div:nth-child(2) {
+        flex-basis: 100%;
+    }
+    section.price div.information figure {
+        padding: 0 0 20px 50px;
+    }
+    section.price div.information h5 {
+        padding-bottom: 50px;
+    }
+    section.price div.information p, ul{
+        font-size: 0.85rem;
+      
+        
+    }
+}
+@media (min-width: 769px) and (max-width: 979px) {
+    section.price.regulation {
+        padding: 0;
+    }
+    section.price div.information {
+        flex-wrap: wrap;
+        padding-left: 50px;
+    }
+    section.price div.information div:first-child {
+        flex-basis: 100%;
+    }
+    section.price div.information div:nth-child(2) {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+    section.price.regulation {
+        padding: 0;
+    }
+    section.price div.information {
+        flex-wrap: wrap;
+        padding-left: 90px;
+    }
+    section.price div.information div:first-child {
+        flex-basis: 100%;
+    }
+    section.price div.information div:nth-child(2) {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 391px) and (max-width: 430px) {
+    section.price.regulation {
+        padding: 0;
+    }
+    section.price div.information {
+        flex-wrap: wrap;
+        padding-left: 40px;
+    }
+    section.price div.information div:first-child {
+        flex-basis: 100%;
+    }
+    section.price div.information div:nth-child(2) {
+        flex-basis: 100%;
+    }
+    section.price div.information h5 {
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    section.price div.information p{
+        width: 65%;
+
+    }
+    section.price div.information ul {
+        width: 70%;
+    }
+    section.price div.information figure {
+        padding-bottom: 40px;
+    }
+   
+}
+@media (min-width: 376px) and (max-width: 390px) {
+    section.price.regulation {
+        padding: 0;
+    }
+    section.price div.information {
+        flex-wrap: wrap;
+        padding-left: 35px;
+    }
+    section.price div.information div:first-child {
+        flex-basis: 100%;
+    }
+    section.price div.information div:nth-child(2) {
+        flex-basis: 100%;
+    }
+    section.price div.information h5 {
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 40px;
+        padding-right: 40px;
+    }
+    section.price div.information p{
+        width: 65%;
+
+    }
+    section.price div.information ul {
+        width: 70%;
+    }
+    section.price div.information figure {
+        padding-bottom: 40px;
+    }
+    section.price div.information div:nth-child(2) p {
+        width: 60%;
+        line-height: 160%;
+    }
+    section.price div.information div:nth-child(2) figure p{
+        align-self: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+    section.price.regulation {
+        padding: 0;
+    }
+    section.price div.information {
+        flex-wrap: wrap;
+        padding-left: 35px;
+    }
+    section.price div.information div:first-child {
+        flex-basis: 100%;
+    }
+    section.price div.information div:nth-child(2) {
+        flex-basis: 100%;
+    }
+    section.price div.information h5 {
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 40px;
+        padding-right: 40px;
+    }
+    section.price div.information p{
+        width: 65%;
+
+    }
+    section.price div.information ul {
+        width: 68%;
+    }
+    section.price div.information figure {
+        padding-bottom: 40px;
+    }
+    section.price div.information div:nth-child(2) p {
+        width: 60%;
+        line-height: 160%;
+    }
+    section.price div.information div:nth-child(2) figure p{
+        align-self: center;
+    }
+}
+
+
+/*  KONTAKT  */
+
+section.contact {
+    margin: 0 100px;
+    padding: 100px 100px 100px 100px;
+    color: black;
+    overflow: hidden;
+}
+
+section.contact h3{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 60px;
+    padding-left: 0px;
+    
+}
+
+section.contact div#map{
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+}
+
+section.contact div.wrapper.contact {
+    display: flex;
+}
+section.contact div.wrapper.contact form{
+flex-basis: 60%;
+}
+
+section.contact div.wrapper.contact div.address{
+    flex-basis: 40%;
+}
+section.contact div.wrapper.contact form div{
+    padding-right: 160px;
+    }
+
+section.contact div.wrapper.contact form p{
+    font-size: 1rem;
+    padding-top: 40px;
+}
+section.contact div.wrapper.contact form textarea{
+    width: 95%;
+    height: 80%;
+    margin: 20px 0px;
+    border: 1px solid rgb(200,200,200);
+    font-size: 1rem;
+    font-family: "Raleway",sans-serif;
+    padding: 10px;
+}
+section.contact div.wrapper.contact form textarea::placeholder,
+section.contact div.wrapper.contact form input::placeholder{
+
+    font-size: 0.75rem;
+    font-family: "Raleway",sans-serif;
+    color: rgb(200,200,200);
+}
+
+section.contact div.wrapper.contact form input{
+    width: 45%;
+    margin: 10px 0;
+    border: 1px solid rgb(200,200,200);
+    font-size: 1rem;
+    font-family: "Raleway",sans-serif;
+    padding: 10px;
+}
+section.contact div.wrapper.contact form input#contact-number{
+    margin-right: 400px;
+} 
+
+section.contact div.wrapper form input#agreement{
+    width: 4%;
+}
+
+section.contact div.wrapper.contact form label {
+   line-height: 180%;
+    font-size: 0.75rem;
+    font-family: "Raleway",sans-serif;
+   
+    color: rgb(200,200,200);
+}
+section.contact div.wrapper.contact form input:nth-last-of-type(1){
+    width: 80%; 
+}
+
+section.contact div.wrapper.contact button {
+    display: block;
+    padding: 15px 25px;
+    background-color: rgb(0, 157, 255);
+    font-family: "Raleway",sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section.contact div.wrapper.contact button:hover {
+    color: rgb(0, 157, 255);
+    background-color: rgb(255,255,255);  
+    border: 1px solid rgb(200,200,200);
+}
+
+section.contact div.address {
+    margin-top: 100px;
+    font-size: 0.75rem;
+}
+section.contact div.address img{
+    width: 40px;
+    max-height: 40px;
+    padding-top: 20px;
+}
+section.contact div.address div{
+    display: flex;
+    padding-bottom: 15px;
+}
+section.contact div.address div div{
+    display: block;
+}
+section.contact div.address div div{
+    flex-basis: 70%;
+}
+section.contact div.address div p{
+    padding: 5px 20px
+}
+section.contact div.address div p:first-of-type{
+    font-size: 0.85rem;
+}
+section.contact div.address div p:last-of-type{
+    color: rgb(200,200,200);
+}
+@media (min-width: 980px) and (max-width: 1024px) {
+    section.contact {
+        margin: 0;
+        padding: 50px;
+    }
+    section.contact div.wrapper.contact {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+section.contact div.wrapper.contact form {
+    flex-basis: 55%;
+}
+div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact div.address{
+    padding-left: 20px;
+}
+}
+
+
+@media (min-width: 769px) and (max-width: 979px) {
+    section.contact {
+        margin: 0;
+        padding: 50px;
+    }
+    section.contact div.wrapper.contact {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section.contact div.wrapper.contact div.address {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: center;
+  
+}
+div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form div {
+    padding: 0;
+}
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+    section.contact {
+        margin: 0;
+        padding: 50px;
+    }
+    section.contact h3{
+        font-size: 1.5rem;
+    }
+    section.contact div.wrapper.contact {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    section.contact div.wrapper.contact div.address {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: space-around;
+  
+}
+div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form {
+    padding-left: 50px;
+}
+
+}
+
+@media (min-width: 391px) and (max-width: 430px) {
+    section.contact {
+        margin: 0;
+        padding: 30px;
+    }
+    section.contact h3{
+        font-size: 1rem;
+    }
+    section.contact div.wrapper.contact {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    section.contact div.wrapper.contact div.address {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: flex-start;
+  
+}
+div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form {
+    padding-left: 0px;
+}
+section.contact div.wrapper.contact form textarea{
+    width: 83%;
+}
+section.contact div.address div div {
+    flex-basis: 100%;
+}
+section.contact div.address {
+    margin-top: 50px;
+}
+section.contact div.wrapper.contact form div div{
+    padding-right: 70px;
+}
+}
+
+
+@media (min-width: 361px) and (max-width: 390px) {
+    section.contact {
+        margin: 0;
+        padding: 30px;
+    }
+    section.contact h3{
+        font-size: 1rem;
+    }
+    section.contact div.wrapper.contact {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    section.contact div.wrapper.contact div.address {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: flex-start;
+  
+}
+div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form {
+    padding-left: 0px;
+}
+section.contact div.wrapper.contact form textarea{
+    width: 73%;
+}
+section.contact div.address div div {
+    flex-basis: 100%;
+}
+section.contact div.address {
+    margin-top: 50px;
+}
+section.contact div.wrapper.contact form div div{
+    padding-right: 100px;
+}
+section.contact div.wrapper.contact form input{
+    width: 73%;
+
+}
+section.contact div.wrapper.contact form input:nth-last-of-type(1){
+    width: 73%; 
+}
+}
+
+@media (min-width: 0px) and (max-width: 360px) {
+    section.contact {
+        margin: 0;
+        padding: 30px;
+    }
+    section.contact h3{
+        font-size: 1rem;
+    }
+    section.contact div.wrapper.contact {
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    section.contact div.wrapper.contact div.address {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: flex-start;
+  
+}
+div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form div {
+    padding: 0;
+}
+section.contact div.wrapper.contact form {
+    padding-left: 0px;
+}
+section.contact div.wrapper.contact form textarea{
+    width: 68%;
+}
+section.contact div.address div div {
+    flex-basis: 100%;
+}
+section.contact div.address {
+    margin-top: 50px;
+}
+section.contact div.wrapper.contact form div div{
+    padding-right: 120px;
+}
+section.contact div.wrapper.contact form input{
+    width: 68%;
+
+}
+section.contact div.wrapper.contact form input:nth-last-of-type(1){
+    width: 68%; 
+}
+}
+
+/*  MINI GALLERY */
+
+section.miniGallery {
+    display: flex;
+    /* overflow: auto; */
+}
+section.miniGallery a{
+    min-height: 300px;
+    width: 20%;
+    overflow: hidden;
+    position: relative;
+}
+section.miniGallery a::before{
+    display: flex;
+    content: url(ikony/facebook.png);
+    position: absolute;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    line-height: 100%;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200,200,200,0.5);
+    transition: 0.5s;
+}
+section.miniGallery a:hover::before{
+    left: 0;
+}
+section.miniGallery a img{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 980px) and (max-width: 1024px) {
+    section.miniGallery a{
+        min-height: 200px;
+    }
+}
+@media (min-width: 561px) and (max-width: 979px) {
+    section.miniGallery a{
+        min-height: 150px;
+    }
+}
+@media (min-width: 0px) and (max-width: 560px) {
+    section.miniGallery {
+        display: none;
+    }
+}
+
+/*  FOOTER  */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 70px 100px;
+}
+
+footer section {
+    flex-basis: 100%;
+    display: flex;
+    padding-bottom: 40px;
+}
+
+footer section div {
+    flex-basis: 25%;
+}
+footer section div a{
+    color: white;
+    text-decoration: none;
+}
+
+footer section div:last-child {
+    flex-basis: 50%;
+}
+
+footer section h5{
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+    
+}
+
+footer section p{
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgb(200,200,200);
+    padding-left: 20px;
+}
+footer div.copyright {
+    padding-top: 20px;
+    border-top: 1px solid rgb(120, 120, 120);
+}
+footer div.copyright p {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: rgb(180,180,180);
+    padding-left: 20px;
+}
+footer section input::placeholder{
+    font-size: 0.75rem;
+    font-family: "Raleway",sans-serif;
+    color: rgb(200,200,200);
+}
+
+footer section input{
+    box-sizing: border-box;
+    width: 50%;
+    border: 1px solid rgb(200,200,200);
+    font-size: 0.75rem;
+    font-family: "Raleway",sans-serif;
+    padding: 15px 10px;
+}
+
+footer section form{
+    font-size: 0;
+    padding-bottom: 20px;
+}
+footer section div.newsletter form.newsletter button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 16px 25px;
+    background-color: rgb(0, 157, 255);
+    font-family: "Raleway",sans-serif;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer section div.newsletter form.newsletter button:hover {
+    color: rgb(0, 157, 255);
+    background-color: rgb(250,250,250);  
+    
+}
+
+footer section p{
+    padding: 0px 0px 5px 0;
+}
+
+@media (min-width: 431px) and (max-width: 979px) {
+    footer {
+        padding: 70px 0; 
+    }
+    footer section {
+        flex-wrap: wrap;
+    }
+    footer section div {
+        flex-basis: 40%;
+        padding: 0 0 30px 30px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    footer {
+        padding: 70px 0; 
+    }
+    footer section {
+        flex-wrap: wrap;
+    }
+    footer section div {
+        flex-basis: 70%;
+        padding: 0 0 30px 30px;
+    }
+
+footer section div:last-child {
+    flex-basis: 90%;
+}
+}
