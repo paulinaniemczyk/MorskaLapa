@@ -837,12 +837,13 @@ article.dog {
 }
 article.dog div.slider {
 	background-image: url(img/pies.jpg);
-	height: 60vh;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-attachment: fixed, scroll;
+	background-attachment: fixed;
+	background-size: cover;
 	text-align: center;
 	filter: brightness(0.8);
+	height: 60vh;
 }
 
 article.dog div.text {
