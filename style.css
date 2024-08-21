@@ -37,7 +37,7 @@ div.navigation.sticky {
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 4;
 	background-color: rgb(32, 98, 213);
 	animation: stickyNavOpacity 0.5s;
 }
