@@ -2030,7 +2030,7 @@ section.miniGallery a {
 }
 section.miniGallery a::before {
 	display: flex;
-	content: url(ikony/facebook.png);
+	content: url(icons/facebook.png);
 	position: absolute;
 	z-index: 2;
 	justify-content: center;
