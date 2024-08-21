@@ -977,7 +977,7 @@ article.dog div.foto.home {
 	}
 }
 
-@media (min-width: 391px) and (max-width: 430px) {
+@media (min-width: 395px) and (max-width: 430px) {
 	article.dog div.wrapper {
 		flex-wrap: wrap;
 		min-height: 1050px;
@@ -1013,7 +1013,7 @@ article.dog div.foto.home {
 	}
 }
 
-@media (min-width: 374px) and (max-width: 390px) {
+@media (min-width: 374px) and (max-width: 394px) {
 	article.dog div.wrapper {
 		flex-wrap: wrap;
 		min-height: 1100px;
@@ -1548,7 +1548,7 @@ section.price div.information button a:hover {
 	}
 }
 
-@media (min-width: 391px) and (max-width: 430px) {
+@media (min-width: 395px) and (max-width: 430px) {
 	section.price.regulation {
 		padding: 0;
 	}
@@ -1577,7 +1577,7 @@ section.price div.information button a:hover {
 		padding-bottom: 40px;
 	}
 }
-@media (min-width: 376px) and (max-width: 390px) {
+@media (min-width: 376px) and (max-width: 394px) {
 	section.price.regulation {
 		padding: 0;
 	}
@@ -1862,7 +1862,7 @@ section.contact div.address div p:last-of-type {
 	}
 }
 
-@media (min-width: 391px) and (max-width: 430px) {
+@media (min-width: 395px) and (max-width: 430px) {
 	section.contact {
 		margin: 0;
 		padding: 30px;
@@ -1903,7 +1903,7 @@ section.contact div.address div p:last-of-type {
 	}
 }
 
-@media (min-width: 361px) and (max-width: 390px) {
+@media (min-width: 361px) and (max-width: 394px) {
 	section.contact {
 		margin: 0;
 		padding: 30px;
