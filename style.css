@@ -841,6 +841,8 @@ article.dog div.slider {
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
+	top: 0;
+	left: 0;
 	text-align: center;
 	filter: brightness(0.8);
 	height: 60vh;
