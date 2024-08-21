@@ -1013,7 +1013,7 @@ article.dog div.foto.home {
 	}
 }
 
-@media (min-width: 374px) and (max-width: 394px) {
+@media (min-width: 375px) and (max-width: 394px) {
 	article.dog div.wrapper {
 		flex-wrap: wrap;
 		min-height: 1100px;
@@ -1049,7 +1049,7 @@ article.dog div.foto.home {
 	}
 }
 
-@media (min-width: 0px) and (max-width: 375px) {
+@media (min-width: 0px) and (max-width: 374px) {
 	article.dog div.wrapper {
 		flex-wrap: wrap;
 		min-height: 1200px;
