@@ -836,11 +836,11 @@ article.dog {
 	overflow: hidden;
 }
 article.dog div.slider {
-	height: 60vh;
 	background-image: url(img/pies.jpg);
+	height: 60vh;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: fixed, scroll;
 	text-align: center;
 	filter: brightness(0.8);
 }
