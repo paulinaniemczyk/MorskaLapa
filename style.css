@@ -256,6 +256,7 @@ div.media button:hover {
 		cursor: pointer;
 		transition: 0.3s;
 		font-size: 2rem;
+		color: white;
 	}
 	nav#mobile li a {
 		display: block;
@@ -839,8 +840,8 @@ article.dog div.slider {
 	background-image: url(img/pies.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-attachment: fixed, scroll;
-	/* background-size: cover; */
+	background-attachment: fixed;
+	background-size: cover;
 	top: 0;
 	left: 0;
 	text-align: center;
@@ -946,6 +947,9 @@ article.dog div.foto.home {
 	article.dog div.beach {
 		padding-left: 30px;
 	}
+	article.dog div.slider {
+		background-attachment: fixed;
+	}
 }
 
 @media (min-width: 431px) and (max-width: 768px) {
@@ -977,6 +981,9 @@ article.dog div.foto.home {
 	}
 	article.dog div.beach {
 		padding-left: 30px;
+	}
+	article.dog div.slider {
+		background-attachment: scroll;
 	}
 }
 
@@ -1014,6 +1021,9 @@ article.dog div.foto.home {
 	article.dog div.wrapper {
 		margin: 0;
 	}
+	article.dog div.slider {
+		background-attachment: scroll;
+	}
 }
 
 @media (min-width: 375px) and (max-width: 394px) {
@@ -1050,6 +1060,9 @@ article.dog div.foto.home {
 	article.dog div.wrapper {
 		margin: 0;
 	}
+	article.dog div.slider {
+		background-attachment: scroll;
+	}
 }
 
 @media (min-width: 0px) and (max-width: 374px) {
@@ -1085,6 +1098,9 @@ article.dog div.foto.home {
 	}
 	article.dog div.wrapper {
 		margin: 0;
+	}
+	article.dog div.slider {
+		background-attachment: scroll;
 	}
 }
 
