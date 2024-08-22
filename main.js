@@ -98,6 +98,7 @@
   const btnHamburger = document.querySelector('nav#mobile button.hamburger i');
   const btnClose = document.querySelector('nav#mobile button.close i');
   const navMobile = document.querySelector('nav#mobile ul');
+  const liNavigation = document.querySelectorAll('nav#mobile ul li');
 
   btnHamburger.addEventListener('click', ()=> {
     console.log('ok')
@@ -108,4 +109,11 @@
   btnClose.addEventListener('click', ()=> {
     navMobile.style.display = 'none';
     btnHamburger.style.display = 'block'
+  })
+
+  liNavigation.forEach((element) => {
+    element.addEventListener('click', ()=> {
+      navMobile.style.display = 'none';
+      btnHamburger.style.display = 'block'
+    })
   })
