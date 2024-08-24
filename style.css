@@ -530,13 +530,6 @@ div#modalReservation button:hover {
 		text-align: center;
 		line-height: 150%;
 	}
-	header div.slider .slide:nth-child(1) {
-		background-image: url(img/bannerM.webp);
-	}
-
-	header div.slider .slide:nth-child(2) {
-		background-image: url(img/wjazdMorskaLapaM.webp);
-	}
 }
 
 @media (min-width: 0px) and (max-width: 390px) {
@@ -567,13 +560,6 @@ div#modalReservation button:hover {
 		padding-top: 50px;
 		text-align: center;
 		line-height: 150%;
-	}
-	header div.slider .slide:nth-child(1) {
-		background-image: url(img/bannerM.webp);
-	}
-
-	header div.slider .slide:nth-child(2) {
-		background-image: url(img/wjazdMorskaLapaM.webp);
 	}
 }
 
