@@ -501,6 +501,17 @@ div#modalReservation button:hover {
 	transform: scale(1.2) translate(-125%, 35%);
 }
 
+@media (min-width: 1021px) and (max-width: 1400px) {
+	header section.slider h1 {
+		font-size: 4rem;
+	}
+}
+@media (min-width: 769px) and (max-width: 1020px) {
+	header section.slider h1 {
+		font-size: 3.5rem;
+	}
+}
+
 @media (min-width: 391px) and (max-width: 768px) {
 	header section.slider h1 {
 		font-size: 3rem;
