@@ -25,10 +25,11 @@ nav#mobile {
 
 div.wrapper.navigation {
 	position: absolute;
+	width: 100%;
 	top: 0;
 	left: 0;
 	display: flex;
-	padding: 20px;
+	padding: 0px;
 	/* justify-content: space-between; */
 	z-index: 2;
 }
@@ -60,7 +61,7 @@ div.navigation.sticky button:hover {
 }
 
 div nav {
-	flex-basis: 45%;
+	flex-basis: 50%;
 }
 
 div.wrapper.navigation nav ul {
@@ -107,20 +108,25 @@ div.logo {
 	position: relative;
 	padding-top: 10px;
 }
-
+div.logo a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 div.logo img {
-	width: 50%;
+	width: 120px;
 	position: relative;
 	top: 0;
 	left: 0;
-	transform: translateX(50%);
+	padding: 10px;
 }
 
 div.media {
-	flex-basis: 20%;
+	flex-basis: 30%;
 	text-align: right;
 	padding-top: 50px;
 	flex-grow: 2;
+	padding-right: 20px;
 }
 
 div.media a {
@@ -199,7 +205,9 @@ div.media button:hover {
 	/* html {
         font-size: 20px;
     } */
-
+	div.logo img {
+		width: 90px;
+	}
 	div.wrapper.navigation {
 		padding: 0px;
 	}
@@ -281,7 +289,9 @@ div.media button:hover {
 	/* html {
         font-size: 20px;
     } */
-
+	div.logo img {
+		width: 80px;
+	}
 	div.wrapper.navigation {
 		padding: 0px;
 	}
@@ -607,13 +617,24 @@ section.about .foto {
 		margin-top: 140px;
 	}
 }
-
-@media (min-width: 431px) and (max-width: 979px) {
+@media (min-width: 650px) and (max-width: 979px) {
 	section.about {
 		flex-direction: column;
 		align-items: stretch;
 		height: 1000px;
-		margin: 50px 60px;
+		margin: 50px 0px;
+	}
+	section.about .description h3 {
+		font-size: 1.8rem;
+	}
+}
+
+@media (min-width: 431px) and (max-width: 649px) {
+	section.about {
+		flex-direction: column;
+		align-items: stretch;
+		height: 1100px;
+		margin: 50px 0px;
 	}
 	section.about .description h3 {
 		font-size: 1.8rem;
@@ -772,21 +793,46 @@ article.description h5 {
 		font-weight: 500;
 	}
 }
-@media (min-width: 431px) and (max-width: 768px) {
+@media (min-width: 651px) and (max-width: 768px) {
 	article.description div.container {
 		flex-direction: column;
 	}
 	article.description div.container div.icons {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: left;
+		justify-content: center;
 	}
 	article.description div.container div.icons h5 {
 		flex-basis: 100%;
 		font-weight: 500;
 	}
 	article.description div.container div.icons figure {
-		flex-basis: 40%;
+		flex-basis: 100%;
+		padding-left: 200px;
+	}
+	article.description h5 {
+		font-weight: 500;
+	}
+	article.description h3 {
+		font-size: 1.5rem;
+	}
+}
+@media (min-width: 431px) and (max-width: 650px) {
+	article.description div.container {
+		flex-direction: column;
+	}
+	article.description div.container div.icons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	article.description div.container div.icons h5 {
+		flex-basis: 100%;
+		font-weight: 500;
+	}
+	article.description div.container div.icons figure {
+		flex-basis: 100%;
+		padding-left: 160px;
 	}
 	article.description h5 {
 		font-weight: 500;
@@ -2207,7 +2253,7 @@ section.contact div.wrapper.contact div.address {
 	flex-basis: 40%;
 }
 section.contact div.wrapper.contact form div {
-	padding-right: 160px;
+	padding-right: 60px;
 }
 
 section.contact div.wrapper.contact form p {
@@ -2353,13 +2399,19 @@ section.contact div.address div p:last-of-type {
 	}
 	section.contact div.wrapper.contact {
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: left;
+	}
+	section.contact div.wrapper.contact form {
+		flex-basis: 60%;
 	}
 	section.contact div.wrapper.contact div.address {
 		display: flex;
 		flex-wrap: wrap;
 		flex-basis: 100%;
 		justify-content: center;
+	}
+	section.contact div.wrapper.contact div.address div {
+		width: 50%;
 	}
 	div.wrapper.contact form div {
 		padding: 0;
@@ -2369,7 +2421,7 @@ section.contact div.address div p:last-of-type {
 	}
 }
 
-@media (min-width: 551px) and (max-width: 768px) {
+@media (min-width: 641px) and (max-width: 768px) {
 	section.contact {
 		margin: 0;
 		padding: 50px;
@@ -2387,6 +2439,12 @@ section.contact div.address div p:last-of-type {
 		flex-basis: 100%;
 		justify-content: space-around;
 	}
+	section.contact div.wrapper.contact form {
+		flex-basis: 80%;
+	}
+	section.contact div.wrapper.contact div.address div {
+		width: 50%;
+	}
 	div.wrapper.contact form div {
 		padding: 0;
 	}
@@ -2394,11 +2452,11 @@ section.contact div.address div p:last-of-type {
 		padding: 0;
 	}
 	section.contact div.wrapper.contact form {
-		padding-left: 50px;
+		padding-left: 10px;
 	}
 }
 
-@media (min-width: 395px) and (max-width: 550px) {
+@media (min-width: 395px) and (max-width: 640px) {
 	section.contact {
 		margin: 0;
 		padding: 30px;
@@ -2627,12 +2685,17 @@ section.miniGallery a img {
 		min-height: 200px;
 	}
 }
-@media (min-width: 561px) and (max-width: 979px) {
+@media (min-width: 880px) and (max-width: 979px) {
 	section.miniGallery a {
-		min-height: 150px;
+		min-height: 250px;
 	}
 }
-@media (min-width: 0px) and (max-width: 560px) {
+@media (min-width: 761px) and (max-width: 879px) {
+	section.miniGallery a {
+		min-height: 200px;
+	}
+}
+@media (min-width: 0px) and (max-width: 760px) {
 	section.miniGallery {
 		display: none;
 	}
@@ -2730,7 +2793,7 @@ footer section p {
 	padding: 0px 0px 5px 0;
 }
 
-@media (min-width: 431px) and (max-width: 979px) {
+@media (min-width: 601px) and (max-width: 979px) {
 	footer {
 		padding: 70px 0;
 	}
@@ -2740,6 +2803,24 @@ footer section p {
 	footer section div {
 		flex-basis: 40%;
 		padding: 0 0 30px 30px;
+	}
+	footer section input {
+		width: 80%;
+	}
+}
+@media (min-width: 431px) and (max-width: 600px) {
+	footer {
+		padding: 70px 0;
+	}
+	footer section {
+		flex-wrap: wrap;
+	}
+	footer section div {
+		flex-basis: 40%;
+		padding: 0 0 30px 30px;
+	}
+	footer section input {
+		width: 120%;
 	}
 }
 
