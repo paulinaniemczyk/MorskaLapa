@@ -190,6 +190,9 @@ div.media button:hover {
 		flex-basis: 16%;
 		padding-top: 20px;
 	}
+	div.wrapper.navigation nav ul li a {
+		padding: 0;
+	}
 }
 
 @media (min-width: 431px) and (max-width: 979px) {
@@ -387,12 +390,12 @@ header div.slider .slide {
 }
 
 header div.slider .slide:nth-child(1) {
-	background-image: url(img/banner.png);
+	background-image: url(img/banner.webp);
 	animation-delay: 0s;
 }
 
 header div.slider .slide:nth-child(2) {
-	background-image: url(img/wjazdMorskaLapa.jpg);
+	background-image: url(img/wjazdMorskaLapa.webp);
 	animation-delay: -5s;
 }
 
